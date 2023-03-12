@@ -1,0 +1,76 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+#meal-app-container{
+  height:100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center; 
+}
+
+#search-bar{
+  position:absolute;
+  top:20%;
+  border:2px solid #ccc;
+  border-radius:5em;
+}
+
+#search-bar #search-input{
+  outline:none;
+  border:none;
+  font-size:1rem;
+  margin-left:0.5em;
+}
+
+#search-bar button{
+  background-color: black;
+  color:white;
+  padding:0.5em;
+}
+
+#search-bar #search-btn{
+  border-radius:0 5em 5em 0;
+}
+
+#search-bar #search-random{
+  border-radius:5em 0 0 5em;
+}
+
+
+#search-results{
+  position:absolute;
+  top:30%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-card{
+  width:300px;
+  margin-bottom: 0.5em;
+  border:2px solid #ccc;
+  padding:0.5em;
+}
+
+.meal-card img{
+  width:100%;
+}
+
+.meal-card #meal-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.meal-card button{
+  border: none;
+  background-color: white;
+  margin-right:0.3em;
+  color: rgb(156, 154, 154);
+}
+
+.meal-card button:hover{
+  color:red;
+}
