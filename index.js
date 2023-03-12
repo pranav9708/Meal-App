@@ -20,10 +20,12 @@ searchInput.addEventListener('input',async(e)=>{
             const mealCard=document.createElement('div');
             mealCard.classList.add('meal-card');
             mealCard.innerHTML=`
+            <a class="mealPage-link" href="pages/meal.html?meal=${meal.strMeal}">
             <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+            </a>
             <div id="meal-name">
                 <h2>${meal.strMeal}</h2>
-                <button><i class="fa-solid fa-heart"></i></button>
+                <button id="add-to-favorite"><i class="fa-solid fa-heart"></i></button>
             </div>`;
             searchResults.appendChild(mealCard);
         });
