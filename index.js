@@ -3,7 +3,13 @@ const searchInput = document.querySelector('#search-input');
 const searchButton = document.querySelector('#search-btn');
 const searchResults =document.querySelector('#search-results');
 
-searchInput.addEventListener('input',async(e)=>{
+searchInput.addEventListener('input',displayResults);
+searchButton.addEventListener('click',displayResults);
+
+document.addEventListener('DOMContentLoaded',()=>{
+    searchInput.innerText='';
+})
+async function displayResults(e){
     e.preventDefault();
 
     const query=searchInput.value;
@@ -32,4 +38,4 @@ searchInput.addEventListener('input',async(e)=>{
     }else{
         searchResults.innerHTML='No results found';
     }
-});
+}

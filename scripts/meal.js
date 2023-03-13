@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const ingredients = [];
     const measures = [];
     for (const key in mealData) {
-    if (mealData.hasOwnProperty(key)) {
-        if (key.startsWith('strIngredient') && mealData[key].trim().length>0) {
-        ingredients.push(mealData[key]);
-        } else if (key.startsWith('strMeasure')) {
-        measures.push(mealData[key]);
+        if (mealData.hasOwnProperty(key)) {
+            if (key.startsWith('strIngr') && mealData[key]!=null && mealData[key].length>0) {
+                ingredients.push(mealData[key]);
+            } else if (key.startsWith('strMeasure')) {
+                measures.push(mealData[key]);
+            }
         }
-    }
     }
 
     for (let i = 0; i < ingredients.length; i++) {
