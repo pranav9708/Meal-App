@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const mealName=document.createElement('p');
     mealName.innerText=`${mealData.strMeal}`;
     const mealOrigin=document.createElement('p');
-    mealOrigin.innerText=`Country- ${mealData.strArea} `;
+    mealOrigin.innerText=`Area- ${mealData.strArea} `;
     const mealCategory=document.createElement('p');
-    mealCategory.innerText=`Meal Category- ${mealData.strCategory}`;
+    mealCategory.innerText=`Category- ${mealData.strCategory}`;
 
     mealInfo.appendChild(mealName);
     mealInfo.appendChild(mealOrigin);

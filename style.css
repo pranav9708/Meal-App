@@ -9,6 +9,10 @@ body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.red{
+  color:red !important;
+}
+
 #meal-app-container{
   display: flex;
   justify-content: center; 
@@ -66,6 +70,11 @@ body{
   top:25%;
 }
 
+#favorites-page a:focus,#favorites-page a:hover{
+  cursor:pointer;
+  color:violet;
+}
+
 #search-results{
   width:85%;
   position:absolute;
@@ -87,8 +96,10 @@ body{
   width:100%;
 }
 
-.meal-card img:hover{
+.meal-card:hover{
   box-shadow: 0 0 0.3em;
+  width:305px;
+  cursor: pointer;
 }
 
 .meal-card #meal-name{
@@ -107,6 +118,11 @@ body{
   color:red;
   font-size: 1rem;
 }
+
+.meal-card button[style*="color: red"]:hover{
+  color:grey;
+}
+
 
 .mealPage-link{
   all:unset;
