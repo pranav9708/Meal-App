@@ -16,6 +16,8 @@ body{
     text-decoration: none;
 }
 
+
+
 #meal-container{
     width:90%;
     max-width:1000px;
@@ -26,7 +28,14 @@ body{
 #meal-container a h1{
     color:#E53935;
     margin:1.5em;
+    font-size: 1.9rem;
 }
+
+#meal-container a h1:focus,#meal-container a h1:hover{
+    color:grey;
+    font-size:2rem;
+}
+
 #head-section{
     display:flex;
     justify-content: space-between;
