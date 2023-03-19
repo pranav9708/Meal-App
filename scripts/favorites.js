@@ -2,7 +2,6 @@ let favoriteIds=JSON.parse(localStorage.getItem('favorites')) || [];
 const favoriteRes=document.getElementById('favorite-results');
 
 async function favorites(){
-    favoriteRes.innerHTML="";
     if(favoriteIds.length <1){
         favoriteRes.innerHTML='<h1>No Favorites found</h1>';
     }else{
