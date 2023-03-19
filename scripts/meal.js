@@ -9,11 +9,13 @@ const mealIngredient=document.getElementById('meal-ingredients');
 const mealInstructions=document.getElementById('meal-instructions');
 
 document.addEventListener('DOMContentLoaded',async()=>{
+
+    //getting meal details from api
     const response= await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal}`);
     const data=await response.json();
     const mealData=data.meals[0];
 
-    //adding meal name and origin in head section
+    //adding meal name,area and category in head section
     const mealName=document.createElement('p');
     mealName.innerText=`${mealData.strMeal}`;
     const mealOrigin=document.createElement('p');
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
     let videoId=videoParam.split('=')[1];
     mealYoutube.innerHTML=`<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
     
-    //adding meal ingredients
+    //storing ingredients and measures for the meal
     const ingredients = [];
     const measures = [];
     for (const key in mealData) {
@@ -47,6 +49,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
         }
     }
 
+    //displaying ingredient and measurements
     for (let i = 0; i < ingredients.length; i++) {
         const listItem= document.createElement('li');
         listItem.innerHTML=`<span>${ingredients[i]} - ${measures[i]}</span>`
@@ -56,4 +59,5 @@ document.addEventListener('DOMContentLoaded',async()=>{
     //add meal recipe instructions
     console.log(mealData);
     mealInstructions.innerHTML=`<h3>Recipe</h3><p>   ${mealData.strInstructions}</p>`
+    
 })

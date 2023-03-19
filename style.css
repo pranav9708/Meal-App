@@ -1,3 +1,4 @@
+/* common styles */
 *{
   margin:0;
   padding:0;
@@ -13,10 +14,13 @@ body{
   color:red !important;
 }
 
+/* meal container styles */
 #meal-app-container{
   display: flex;
   justify-content: center; 
 }
+
+/* search bar styles */
 
 #search-bar{
   position:absolute;
@@ -56,6 +60,7 @@ body{
   border-radius:5em 0 0 5em;
 }
 
+/* favorite page styles */
 #favorites-page{
   display:flex;
   justify-content: center;
@@ -75,6 +80,7 @@ body{
   color:#8B008B;
 }
 
+/* search results styles */
 #search-results{
   width:85%;
   position:absolute;
@@ -84,6 +90,7 @@ body{
   justify-content: center;
 }
 
+/* meal card styles */
 .meal-card{
   width:300px;
   margin: 0.5em;
