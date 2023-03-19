@@ -23,6 +23,22 @@
     margin-bottom: 1.5em;
   }
 
+  #home-page{
+    margin-top:5em;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  #home-page h1{
+    color:grey;
+    font-size: 1.9rem;
+}
+
+#home-page h1:focus,#home-page h1:hover{
+    color:black;
+    font-size:2rem;
+}
+
 /* favorite results div css */
 
 #favorite-results{
